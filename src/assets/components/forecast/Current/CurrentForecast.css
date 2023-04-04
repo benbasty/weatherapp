@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
+    font-family: 'Bodoni';
 }
 
 .currentForecast .location {
@@ -10,14 +11,12 @@
 }
 
 .currentForecast .location h2 {
-    font-family: 'Bodoni';
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-top: 1.5rem;
 }
 
 .currentForecast .location h5 {
-    font-family: 'Bodoni';
     font-weight: 400;
     font-size: 0.7rem;
 }
@@ -25,7 +24,8 @@
 .currentForecast .currentWeather {
     display: flex;
     flex-direction: row;
-    margin: 1rem 7rem;
+    margin: 1rem 5rem;
+    gap: 1rem;
 }
 
 .currentForecast .currentWeather .currentWeatherDetails,
@@ -34,10 +34,62 @@
 }
 
 .currentForecast .currentWeather .currentWeatherDetails {
-    margin-top: 2.45rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.currentForecast .currentWeather .currentWeatherDetails .currentWeatherTemp {
+    font-size: 2.7rem;
+}
+.currentForecast .currentWeather .currentWeatherDetails .currentWeatherDesc {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-top: -0.5rem;
+}
+.currentForecast .currentWeather .currentWeatherDetails .currentWeatherUpdate {
+    font-size: 0.5rem;
+    font-weight: 300;
 }
 
 .currentForecast .currentWeather .currentWeatherImage img {
     width: 100%;
     height: 100%;
+    margin-top: -0.9rem;
+}
+
+.currentForecast .weatherCharacteristics, .currentForecast .temperatureDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.currentForecast .weatherCharacteristics .weatherCharacteristic h5,
+.currentForecast .temperatureDetails .temperatureDetail h5 {
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.currentForecast .temperatureDetails .temperatureDetail h5::after {
+    content: " |";
+    margin-left: 0.66rem;
+}
+.currentForecast .temperatureDetails .temperatureDetail:last-child h5::after {
+    content: "";
+}
+.charts {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem auto;
+    gap: 2rem;
+}
+.chart {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.chart h5 {
+    font-size: 0.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 400;
 }

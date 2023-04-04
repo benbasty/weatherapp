@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <div className='container search'>
         <form>
-            <input type='text' aria-label="search" placeholder='🔍 Search City..'/>
+            <input type='text' aria-label="search" placeholder='🔍 Search City'/>
         </form>
         <MdLocationOn />
         <div className='temperature'>
