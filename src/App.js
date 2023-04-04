@@ -1,7 +1,7 @@
 import './App.css';
-import Cities from './assets/components/cities/Cities';
-import Search from './assets/components/search/Search';
-import CurrentForecast from './assets/components/forecast/Current/CurrentForecast';
+import Cities from '../src/components/cities/Cities';
+import Search from '../src/components/search/Search';
+import CurrentForecast from '../src/components/forecast/Current/CurrentForecast';
 
 function App() {
   return (
