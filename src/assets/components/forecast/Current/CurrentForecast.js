@@ -15,8 +15,8 @@ const CurrentForecast = () => {
             {
                 label: 'Precipitation',
                 data: [50, 50],
-                backgroundColor: ['blue','white'],
-                borderColor: ['blue','white']
+                backgroundColor: ['#7CB9E8','white'],
+                borderColor: ['#7CB9E8','white']
             }
         ]
     }
@@ -26,8 +26,8 @@ const CurrentForecast = () => {
             {
                 label: 'Precipitation',
                 data: [41, 59],
-                backgroundColor: ['blue','white'],
-                borderColor: ['blue','white']
+                backgroundColor: ['#7CB9E8','white'],
+                borderColor: ['#7CB9E8','white']
             }
         ]
     }
@@ -38,8 +38,8 @@ const CurrentForecast = () => {
             {
                 label: 'Precipitation',
                 data: [6, 4],
-                backgroundColor: ['blue','white'],
-                borderColor: ['blue','white']
+                backgroundColor: ['#7CB9E8','white'],
+                borderColor: ['#7CB9E8','white']
             }
         ]
     }
@@ -50,7 +50,8 @@ const CurrentForecast = () => {
               display: false
             }
         },
-        cutout: 23
+        cutout: 23,
+        events: []
     }
   return (
     <div className='container currentForecast'>
