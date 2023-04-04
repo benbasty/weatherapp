@@ -1,0 +1,20 @@
+.search {
+    font-family: 'Bodoni';
+    display: flex;
+    gap: 1rem;
+}
+.search svg, .search .temperature {
+    margin-top: 4px;
+    font-size: 24px;
+}
+
+.search .temperature {
+    margin-left: auto;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 8px;
+    width: 250px;
+    margin-left: 15px;
+}

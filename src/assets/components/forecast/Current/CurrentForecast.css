@@ -1,0 +1,43 @@
+.currentForecast {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
+.currentForecast .location {
+    flex-direction: column;
+    text-align: center;
+}
+
+.currentForecast .location h2 {
+    font-family: 'Bodoni';
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.currentForecast .location h5 {
+    font-family: 'Bodoni';
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.currentForecast .currentWeather {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 7rem;
+}
+
+.currentForecast .currentWeather .currentWeatherDetails,
+.currentForecast .currentWeather .currentWeatherImage {
+    width: 50%;
+}
+
+.currentForecast .currentWeather .currentWeatherDetails {
+    margin-top: 2.45rem;
+}
+
+.currentForecast .currentWeather .currentWeatherImage img {
+    width: 100%;
+    height: 100%;
+}

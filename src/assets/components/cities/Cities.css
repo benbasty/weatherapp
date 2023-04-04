@@ -1,0 +1,12 @@
+.cities {
+    margin: 1rem auto;
+}
+.cities .city {
+    font-family: "Didot";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cities .city a {
+    color: #000000;
+}
