@@ -1,0 +1,32 @@
+.hourly {
+    font-family: 'Bodoni';
+    margin-bottom: 1.5rem;
+}
+.hourlyHeader {
+    font-size: 1rem;
+}
+.divider {
+    border-bottom: 1px solid black;
+    margin-bottom: 0.8rem;
+}
+.hourlyForecasts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.daily .dividerVertical {
+    height: 30px;
+    border-right: 2px solid #fff;
+    margin: 1rem 0;
+}
+
+.timeForecast, .tempForecast {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.hourlyForecast img {
+    height: 30px;
+    width: 30px;
+}

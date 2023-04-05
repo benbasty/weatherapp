@@ -82,6 +82,7 @@
     flex-direction: row;
     margin: 1.5rem auto;
     gap: 2rem;
+    position: relative;
 }
 .chart {
     width: 3.5rem;
@@ -92,4 +93,18 @@
     text-align: center;
     margin-top: 0.5rem;
     font-weight: 400;
+}
+
+.chart:first-child p, .chart:nth-child(2) p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 0.85rem;
+    margin-top: -3.3rem;
+}
+.chart:last-child p {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-left: 0.1rem;
+    margin-top: -3.8rem;
+    text-align: center;
 }

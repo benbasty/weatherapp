@@ -112,6 +112,7 @@ const CurrentForecast = () => {
                     options={options}
                 />
                 <h5>Precipitation</h5>
+                <p>{`${precipitation.datasets[0].data[0]} %`}</p>
             </div>
             <div className='chart'>
                 <Doughnut
@@ -119,6 +120,7 @@ const CurrentForecast = () => {
                     options={options}
                 />
                 <h5>Humidity</h5>
+                <p>{`${humidity.datasets[0].data[0]} %`}</p>
             </div>
             <div className='chart'>
                 <Doughnut
@@ -126,6 +128,7 @@ const CurrentForecast = () => {
                     options={options}
                 />
                 <h5>UV Index</h5>
+                <p>{`${uvIndex.datasets[0].data[0]}`}<br/>High</p>
             </div>
         </div>
 
