@@ -1,6 +1,6 @@
 import React from 'react'
 import { format } from 'date-fns';
-import Sun from '../../../assets/sun.png';
+import Sun from '../../../assets/01d.png';
 import './CurrentForecast.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
