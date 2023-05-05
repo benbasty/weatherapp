@@ -15,14 +15,12 @@ function App() {
   const handleOnSearchChange = (searchData) => {
 
     const [lat, lon] = searchData.value.split(" ");
-    // const currentWeatherURL = new URL(WEATHER_API_URL + "/weather?lat="`${lat}` + "&lon="`${lon}` + "&appid=" + WEATHER_API_KEY);
-    const currentWeatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=' + `${lat}` + '&lon=' +`${lon}` + '&appid=' + WEATHER_API_KEY;
-    // const forecastWeatherURL = new URL(WEATHER_API_URL + "/forecast?lat="` ${lat}` + "&lon="`${lon}` + "&appid=" + WEATHER_API_KEY);
-    const forecastWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + `${lat}` + '&lon=' +`${lon}` + '&appid=' + WEATHER_API_KEY;
+    const currentWeatherURL = `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
+    const forecastWeatherURL = `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
     const currentWeatherFetch = fetch(currentWeatherURL);
-    const forecastWeatherFetch = fetch(forecastWeatherURL);
+    const forecastFetch = fetch(forecastWeatherURL);
 
-    Promise.all()
+    Promise.all([currentWeatherFetch, forecastFetch])
       .then(async (response) => {
         const weatherResponse = await response[0].json();
         const forecastResponse = await response[1].json();
@@ -48,7 +46,7 @@ function App() {
     <>
       <Cities />
       <Search onSearchChange={handleOnSearchChange}/>
-      <CurrentForecast />
+      {currentWeather && <CurrentForecast data={currentWeather} />}
       <HourlyForecast />
       <DailyForecast />
     </>
