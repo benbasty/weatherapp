@@ -29,8 +29,6 @@ function App() {
         setForecast({city:searchData.label ,...forecastResponse});
       })
       .catch((err) => console.log(err));
-
-    console.log(currentWeather);
     console.log(forecast);
 
   }
@@ -41,14 +39,14 @@ function App() {
   // fetchWeather();
 
 
-  //55:00
+  //1:13
   return (
     <>
       <Cities />
       <Search onSearchChange={handleOnSearchChange}/>
       {currentWeather && <CurrentForecast data={currentWeather} />}
-      <HourlyForecast />
-      <DailyForecast />
+      {forecast && <HourlyForecast data={forecast} />}
+      {forecast && <DailyForecast data={forecast}/>}
     </>
   );
 }
