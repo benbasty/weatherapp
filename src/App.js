@@ -45,7 +45,7 @@ function App() {
       <Cities />
       <Search onSearchChange={handleOnSearchChange}/>
       {currentWeather && <CurrentForecast data={currentWeather} />}
-      {forecast && <HourlyForecast data={forecast} />}
+      {/* {forecast && <HourlyForecast data={forecast} />} */}
       {forecast && <DailyForecast data={forecast}/>}
     </>
   );
