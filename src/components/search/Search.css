@@ -2,7 +2,8 @@
     font-family: 'Bodoni';
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1rem; 
+    margin-top: 2rem;
 }
 
 .search .css-b62m3t-container {
