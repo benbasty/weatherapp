@@ -69,8 +69,8 @@ const CurrentForecast = ({data}) => {
         <div className='currentWeather'>
             <div className='currentWeatherDetails'>
                 <h1 className='currentWeatherTemp'>{Math.round(data.main.temp)}°C</h1>
-                <h3 className='currentWeatherDesc'>{data.weather[0].description}</h3>
-                <h5 className='currentWeatherUpdate'>Updated {updated}</h5>
+                <h3 className='currentWeatherDesc'>{data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1)}</h3>
+                <h5 className='currentWeatherUpdate'>Updated: {updated}</h5>
             </div>
             <div className='currentWeatherImage'>
                 <img src={`/icons/${data.weather[0].icon}.png`} alt='weatherImg'/>
@@ -79,17 +79,17 @@ const CurrentForecast = ({data}) => {
         <div className='weatherCharacteristics'>
             <div className='weatherCharacteristic'>
 
-                <h5>Pressure <span>{Math.round(data.main.pressure)} hPa</span></h5>
+                <h5>Pressure: <span>{Math.round(data.main.pressure)} hPa</span></h5>
             </div>
             <div className='weatherCharacteristic'>
 
-                <h5>Feels like <span>{Math.round(data.main.feels_like)}°C</span></h5>
+                <h5>Feels like: <span>{Math.round(data.main.feels_like)}°C</span></h5>
             </div>
             <div className='weatherCharacteristic'>
-                <h5>Humidity <span>{data.main.humidity}%</span></h5>
+                <h5>Humidity: <span>{data.main.humidity}%</span></h5>
             </div>
             <div className='weatherCharacteristic'>
-                <h5>Wind <span>{Math.round(data.wind.speed)}m/s</span></h5>
+                <h5>Wind: <span>{Math.round(data.wind.speed)}m/s</span></h5>
             </div>
         </div>
         <div className='temperatureDetails'>
