@@ -23,7 +23,7 @@ const citiesList = [
     title: 'Paris'
   }
 ]
-const Cities = () => {
+const Cities = ({setQuery}) => {
   return (
     <div className='container cities'>
         <div className='city'>
@@ -31,7 +31,7 @@ const Cities = () => {
               citiesList.map((city) => {
                 return (
                   <h4 key={city.id}>
-                    <a href='#city'>{city.title}</a>
+                    <a href='#city' onClick = {() => setQuery({q: city.title})}>{city.title}</a>
                   </h4>
                 )
               })

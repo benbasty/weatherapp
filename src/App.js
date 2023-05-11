@@ -13,26 +13,34 @@ import { useState } from 'react';
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
+  // const [query, setQuery] = useState({q: "Guangzhou"});
 
   const handleOnSearchChange = (searchData) => {
 
     const [lat, lon] = searchData.value.split(" ");
     const currentWeatherURL = `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
     const forecastWeatherURL = `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`;
+    // const weatherDataCity = `${GEO_API_URL}?minPopulation=1000000&namePrefix=${query}`;
     const currentWeatherFetch = fetch(currentWeatherURL);
     const forecastFetch = fetch(forecastWeatherURL);
+    // const weatherDataCityFetch = fetch(weatherDataCity, GEOApiOptions);
+    // console.log(weatherDataCityFetch);
 
     Promise.all([currentWeatherFetch, forecastFetch])
+    //weatherDataCityFetch
       .then(async (response) => {
         const weatherResponse = await response[0].json();
         const forecastResponse = await response[1].json();
+        // const cityDataResponse = await response[2].json();
 
         setCurrentWeather({city: searchData.label, ...weatherResponse});
         setForecast({city:searchData.label ,...forecastResponse});
+        // setQuery({city:searchData.label ,...cityDataResponse})
       })
       .catch((err) => console.log(err));
     // console.log(forecast);
     // console.log(searchData);
+    // console.log(query);
 
   }
 
@@ -47,7 +55,7 @@ function App() {
   //1:13
   return (
     <>
-      {/* <Cities /> */}
+      {/* <Cities setQuery={setQuery}/> */}
       <Search onSearchChange={handleOnSearchChange}/>
       {currentWeather && <CurrentForecast data={currentWeather} />}
       {/* {forecast && <HourlyForecast data={forecast} />} */}
