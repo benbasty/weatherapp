@@ -33,3 +33,21 @@
     height: 30px;
     width: 30px;
 }
+
+@media screen and (max-width: 414px){
+    .timeForecast, .tempForecast {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .timeForecast, .tempForecast {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .timeForecast, .tempForecast {
+        font-size: 0.5rem;
+    }
+}

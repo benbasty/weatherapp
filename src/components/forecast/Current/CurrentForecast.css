@@ -116,3 +116,46 @@
     margin-top: -3.8rem;
     text-align: center;
 }
+
+@media screen and (max-width: 414px){
+    .currentForecast .currentWeather {
+        margin: 1rem 3rem;
+        padding: 0.5rem;
+    }
+
+    .currentForecast .weatherCharacteristics, .currentForecast .temperatureDetails {
+        gap: 0.35rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .currentForecast .weatherCharacteristics .weatherCharacteristic h5,
+.currentForecast .temperatureDetails .temperatureDetail h5 {
+    font-size: 0.55rem;
+}
+}
+
+@media screen and (max-width: 280px){
+    .currentForecast .currentWeather {
+        margin: 0.3rem 1rem;
+        padding: 0.2rem;
+    }
+    .currentForecast .currentWeather .currentWeatherDetails {
+        width: 70%
+    }
+
+    .currentForecast .weatherCharacteristics, .currentForecast .temperatureDetails {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0.4rem;
+    }
+
+    .currentForecast .weatherCharacteristics .weatherCharacteristic h5{
+        padding-left: 0.3rem;
+    }
+
+    .currentForecast .temperatureDetails .temperatureDetail h5::after {
+        content: "";
+    }
+
+}
